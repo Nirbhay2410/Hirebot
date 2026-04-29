@@ -1,0 +1,137 @@
+[
+  {
+    "id": "c2857d9f-30d8-4b98-a9cf-dffea655af39",
+    "timestamp": "2026-04-28T07:41:46.679158Z",
+    "name": "Aryan Pratap Singh",
+    "email": "aryan122pratap@gmail.com",
+    "phone": "7455968931",
+    "experience_years": "1",
+    "desired_position": "Ai/Ml intern",
+    "location": "Delhi",
+    "tech_stack": [
+      "I'm currently experiencing a brief technical connection issue. Could you please rephrase or try again?"
+    ],
+    "qa_pairs": [
+      {
+        "technology": "I'm currently experiencing a brief technical connection issue. Could you please rephrase or try again?",
+        "question": "I'm currently experiencing a brief technical connection issue. Could you please rephrase or try again?",
+        "answer": "what?"
+      }
+    ],
+    "data_consent": true
+  },
+  {
+    "id": "ae58c568-20a3-4687-a885-09fa700975a8",
+    "timestamp": "2026-04-28T08:11:17.203822Z",
+    "name": "Aryan Pratap Singh",
+    "email": "aryan122pratap@gmail.com",
+    "phone": "7455968931",
+    "experience_years": "2",
+    "desired_position": "Ai/ml intern",
+    "location": "Delhi",
+    "tech_stack": [
+      "Aws",
+      "Python",
+      "MongoDB"
+    ],
+    "qa_pairs": [
+      {
+        "technology": "Aws",
+        "question": "1. Can you explain the difference between Amazon S3 and Amazon EBS, and when you would use each in a typical AWS deployment?\n2. How would you design a highly available and scalable architecture for a web application using AWS services such as EC2, RDS, and ELB?\n3. Suppose you're tasked with migrating a legacy on-premises database to AWS, and you need to ensure minimal downtime and data consistency - how would you approach this migration using AWS services like DMS and RDS?",
+        "answer": "Amazon S3 and Amazon Elastic Block Store serve different purposes: S3 is object storage used for storing files such as images, videos, backups, and static website content, offering massive scalability and durability, while EBS is block storage that acts like a virtual hard drive attached to an EC2 instance, making it ideal for operating systems, databases, and applications requiring low-latency disk access. In a typical AWS deployment, S3 is used for static assets and backups, whereas EBS is used for application servers and database storage.\n\nFor a highly available and scalable web application on AWS, I would place an Elastic Load Balancing in front of multiple Amazon EC2 instances running in an Auto Scaling Group across multiple Availability Zones, ensuring fault tolerance and automatic scaling based on demand. The application would use Amazon RDS with Multi-AZ deployment for high availability, while static files would be stored in Amazon S3 and optionally delivered through CloudFront for faster global access.\n\nTo migrate a legacy on-premises database to AWS with minimal downtime, I would first provision an Amazon RDS instance and use AWS Database Migration Service to perform an initial full data load followed by Change Data Capture (CDC), which continuously replicates ongoing changes from the source database. After validating data consistency and ensuring replication lag is minimal, I would schedule a brief cutover window, stop writes on the source, allow DMS to sync final transactions, and then redirect the application to the RDS instance."
+      },
+      {
+        "technology": "Python",
+        "question": "1. Can you explain the difference between static typing and dynamic typing in Python, and how it affects your coding style?\n2. How would you implement a decorator in Python to measure the execution time of a function, and what are some potential use cases for this decorator?\n3. Suppose you're working on a Python project that involves processing large CSV files, and you're experiencing memory issues due to the size of the files - how would you use Python's built-in libraries or third-party libraries like Pandas to optimize memory usage?",
+        "answer": "Python is a dynamically typed language, meaning variable types are determined at runtime, so you can assign different types to the same variable without explicit declarations. Static typing, found in languages like Java or C++, requires variable types to be declared at compile time, catching type errors earlier. Although Python is dynamic, it supports optional type hints using the typing module, which improves readability, IDE support, and maintainability. Dynamic typing speeds up development, while type hints help make large codebases safer and easier to manage.\n\nA decorator for measuring execution time can be implemented using the time module and a wrapper function. It records the start time before calling the target function and calculates the elapsed time afterward. This is especially useful for performance profiling, benchmarking algorithms, optimizing database queries, monitoring API response times, and identifying bottlenecks in production code.\n\nWhen processing large CSV files, loading the entire file into memory is usually a bad idea\u2014computers have a stubborn refusal to conjure extra RAM on demand. Using Python's built-in csv module allows row-by-row processing, which is highly memory efficient. With Pandas, you can use chunksize to read the file in smaller portions, specify appropriate data types using dtype, load only required columns with usecols, and disable unnecessary parsing features. For truly massive datasets, libraries like Dask or Polars can handle out-of-core computation efficiently."
+      },
+      {
+        "technology": "MongoDB",
+        "question": "1. Can you explain the difference between a MongoDB collection and a database, and how you would decide when to create a new collection versus a new database?\n2. How would you optimize the performance of a slow MongoDB query, and what indexing strategies would you consider to improve query execution time?\n3. Suppose you're designing a MongoDB schema for an e-commerce application with high traffic and large product catalogs, how would you structure your collections and indexes to support efficient product searches and filtering?",
+        "answer": "A MongoDB database is a container that holds multiple collections, while a collection is a group of related documents, similar to a table in relational databases. You would create a new collection when storing a different type of entity within the same application, such as users, products, or orders. A new database is typically created when you need strict isolation, such as for separate applications, tenants, environments, or security boundaries.\n\nTo optimize a slow MongoDB query, I would first analyze it using the explain() method to identify collection scans, inefficient stages, or high document examination counts. Then, I would create appropriate indexes based on query patterns, such as single-field indexes for frequent filters, compound indexes for multi-field queries, and text indexes for full-text search. It's also important to avoid over-indexing, as excessive indexes can slow down writes and consume additional storage.\n\nFor a high-traffic e-commerce application, I would use separate collections for products, categories, users, orders, and reviews. The products collection would store core product details, embedded variants, and inventory data, while reviews could be kept separately due to their potentially large volume. To support fast searches and filtering, I would create compound indexes on commonly queried fields like category, brand, price, and availability, along with text indexes on product name and description. For advanced search capabilities at scale, MongoDB Atlas Search would be an excellent choice."
+      }
+    ],
+    "data_consent": true
+  },
+  {
+    "id": "ae15d920-ec65-4fd0-9544-a48582daed30",
+    "timestamp": "2026-04-28T08:46:54.248644Z",
+    "name": "Aryan Pratap Singh",
+    "email": "aryan122pratap@gmail.com",
+    "phone": "7455968931",
+    "experience_years": "1",
+    "desired_position": "Ai/ML intern",
+    "location": "Delhi",
+    "tech_stack": [
+      "Python",
+      "AWS"
+    ],
+    "qa_pairs": [
+      {
+        "technology": "Python",
+        "question": "1. Can you explain the difference between supervised and unsupervised learning in Python, and provide an example of when you would use each?\n2. How would you implement a simple neural network using Python's Keras library to classify handwritten digits, and what considerations would you take into account for model evaluation?\n3. Suppose you're tasked with building a recommendation system using collaborative filtering in Python, and you have a large dataset of user-item interactions - how would you approach this problem, and what techniques would you use to handle issues like sparsity and scalability?",
+        "answer": "Supervised learning uses labeled data, where the model learns to map inputs to known outputs; common tasks include classification and regression. Unsupervised learning works with unlabeled data, discovering hidden patterns such as clusters or associations. For example, you would use supervised learning to predict whether an email is spam based on historical labeled emails, while unsupervised learning would be ideal for customer segmentation based on purchasing behavior. Popular Python libraries for both include scikit-learn, which provides a wide range of algorithms.\nTo classify handwritten digits using Keras, you can train a simple feedforward neural network on the MNIST dataset by flattening the 28\u00d728 pixel images, adding dense hidden layers with ReLU activation, and using a softmax output layer for the ten digit classes. The model is compiled with the Adam optimizer and categorical cross-entropy loss, then trained on the training set. Evaluation should focus on accuracy, confusion matrix, validation loss, and checking for overfitting using techniques like early stopping and dropout. Keras makes this implementation straightforward and production-ready.\nFor a large-scale recommendation system, I would use collaborative filtering techniques such as matrix factorization, alternating least squares (ALS), or neural collaborative filtering. Sparse user-item matrices are best handled using latent factor models, dimensionality reduction, and implicit feedback methods. To ensure scalability, distributed frameworks like Apache Spark MLlib are highly effective. Additional strategies include approximate nearest neighbor search, regularization, batch retraining, and hybrid approaches that combine collaborative and content-based filtering for improved recommendation quality."
+      },
+      {
+        "technology": "AWS",
+        "question": "1. Can you explain the difference between Amazon SageMaker and Amazon Rekognition, and how you would choose between them for a basic image classification task?\n2. How would you optimize the performance of an AWS SageMaker endpoint that is experiencing high latency, considering factors such as instance type, model size, and input data format?\n3. Suppose you're tasked with building a recommender system using AWS services for an e-commerce platform, and you need to integrate user behavior data from Amazon Kinesis, product information from Amazon DynamoDB, and model training on Amazon SageMaker - how would you design the architecture?",
+        "answer": "Amazon SageMaker is a fully managed machine learning platform that allows you to build, train, and deploy custom ML models, while Amazon Rekognition is a pre-trained AI service for image and video analysis. For a basic image classification task, Rekognition is the faster and simpler choice if its built-in labels meet your requirements, since no model training is needed. However, if you need custom classes, higher accuracy, or complete control over the training process, SageMaker is the better option.\nTo reduce latency in a slow SageMaker endpoint, I would first choose an appropriate instance type, such as GPU-backed instances for deep learning models or larger CPU instances for traditional ML workloads. Next, I would optimize the model using techniques like pruning, quantization, or compiling with SageMaker Neo to reduce inference time. Using efficient serialization formats such as Protocol Buffers instead of bulky JSON, enabling multi-model endpoints when appropriate, and configuring auto scaling can further improve performance. Continuous monitoring through CloudWatch helps identify bottlenecks and fine-tune resource allocation.\nFor an e-commerce recommender system, I would stream real-time user interactions through Amazon Kinesis, store product metadata in Amazon DynamoDB, and process the combined data using AWS Lambda or Glue before storing feature-ready datasets in Amazon S3. Model training and deployment would be handled by SageMaker, while predictions would be served through a real-time endpoint. The application would query the SageMaker endpoint for personalized recommendations, using Kinesis for continuous feedback loops and periodic retraining to keep recommendations fresh and accurate."
+      }
+    ],
+    "data_consent": true
+  },
+  {
+    "id": "d3793bf5-295a-40c1-941a-48ffa323e7f4",
+    "timestamp": "2026-04-29T14:19:21.514123Z",
+    "name": "Nirbhay",
+    "email": "nirbhay.22cse@bmu.edu.in",
+    "phone": "6396575759",
+    "experience_years": "2",
+    "desired_position": "AI\\ML",
+    "location": "Gurugram",
+    "tech_stack": [
+      "Python",
+      "SQL"
+    ],
+    "qa_pairs": [
+      {
+        "technology": "Python",
+        "question": "1. What Python libraries do you commonly use for machine learning tasks, and how have you utilized them in your previous projects?\n2. Can you explain the concept of overfitting in machine learning and how you would address it using techniques such as regularization or cross-validation in a Python-based model?\n3. Suppose you're tasked with building a recommender system using Python and a collaborative filtering approach, with a dataset of 1 million user-item interactions - how would you design and implement the system to handle scalability and performance issues?",
+        "answer": "I commonly use a mix of Python libraries depending on the problem type. For traditional machine learning tasks, I rely heavily on Scikit-learn. I\u2019ve used it to build classification and regression models, create preprocessing pipelines, and perform hyperparameter tuning using techniques like grid search.  For deep learning, I work with both TensorFlow and PyTorch. I typically use TensorFlow with Keras for structured projects and deployment scenarios, while I prefer PyTorch when I need more flexibility, such as experimenting with custom neural network architectures or working on NLP tasks.  In terms of data handling, Pandas and NumPy are essential in almost every project. I use them for data cleaning, transformation, and efficient numerical computations.  For visualization, I use Matplotlib and Seaborn to explore data and present insights clearly.  Additionally, for NLP tasks, I\u2019ve worked with libraries like spaCy and Hugging Face Transformers to handle tasks such as text classification, sentiment analysis, and named entity recognition.  Overall, I focus on selecting the right tool based on the problem, while ensuring the solution is scalable, maintainable, and aligned with project requirements"
+      },
+      {
+        "technology": "SQL",
+        "question": "1. Can you explain how you've used SQL to preprocess and prepare data for machine learning models in your previous projects?\n2. How would you optimize a SQL query to efficiently retrieve a large dataset for training a model, considering factors like indexing and join operations?\n3. Suppose you're building a predictive model to forecast sales based on historical data stored in a SQL database, and you notice that the data is heavily skewed towards certain products - how would you handle this imbalance using SQL and machine learning techniques?",
+        "answer": "When retrieving a large dataset for model training, I focus on optimizing the SQL query at multiple levels\u2014especially indexing, joins, and minimizing data movement.  First, indexing is critical. I ensure that columns used in JOIN, WHERE, and ORDER BY clauses are properly indexed. For example, foreign keys used in joins should have indexes, and in some cases, I use composite indexes when multiple columns are frequently queried together. This helps avoid full table scans and significantly improves performance.  Second, I optimize join operations. I only join the necessary tables and prefer INNER JOIN when possible since it\u2019s generally more efficient than outer joins. I also try to reduce the size of tables before joining\u2014for instance, by filtering data using subqueries or common table expressions (CTEs) so that the join operates on a smaller dataset.  Third, I reduce data as early as possible. I avoid using SELECT * and instead fetch only the required columns. I apply WHERE filters early and perform aggregations at the database level rather than in Python, which reduces the amount of data transferred and speeds up processing.  Fourth, I analyze the execution plan. I use EXPLAIN or EXPLAIN ANALYZE to understand how the query is executed, check whether indexes are being used, and identify bottlenecks. Based on that, I refine the query or indexing strategy.  Finally, for very large datasets, I consider partitioning and batching. Partitioning tables\u2014such as by date\u2014can make queries faster, and retrieving data in chunks helps manage memory efficiently during model training.  Overall, my approach is to push as much efficient computation as possible to the database while minimizing unnecessary data transfer and processing.\u201d"
+      }
+    ],
+    "data_consent": true
+  },
+  {
+    "id": "ed210a58-9706-40a7-8e17-65a16271959c",
+    "timestamp": "2026-04-29T14:33:28.126015Z",
+    "name": "Nirbhay",
+    "email": "nirbhay.22cse@bmu.edu.in",
+    "phone": "6396575759",
+    "experience_years": "2",
+    "desired_position": "AI\\ML",
+    "location": "Gurugram",
+    "tech_stack": [
+      "Python",
+      "SQL"
+    ],
+    "qa_pairs": [
+      {
+        "technology": "Python",
+        "question": "1. Can you explain the difference between supervised and unsupervised learning in Python, and provide an example of when you would use each?\n2. How would you implement a simple neural network using the Keras library in Python to classify handwritten digits, and what considerations would you take for model optimization?\n3. Suppose you're working on a project to predict customer churn using a dataset with 10 features and 10,000 samples, and you're experiencing overfitting with your current model - how would you approach this problem and what Python libraries or techniques would you use to improve model performance?",
+        "answer": "Supervised vs Unsupervised Learning  Answer:  \u201cSupervised and unsupervised learning differ mainly in whether labeled data is available.  In supervised learning, the model is trained on labeled data, meaning each input has a corresponding output. The goal is to learn a mapping from inputs to outputs. Common tasks include classification and regression. For example, predicting whether a customer will churn based on historical data using algorithms from Scikit-learn.  In unsupervised learning, the data is unlabeled, and the model tries to find hidden patterns or structures. Common tasks include clustering and dimensionality reduction. For example, segmenting customers into groups based on purchasing behavior using clustering algorithms like K-Means.  So, I would use supervised learning when I have labeled outcomes to predict, and unsupervised learning when I want to explore patterns or groupings in the data.\u201d  2. Simple Neural Network with Keras (Digit Classification)  Answer:  \u201cTo implement a simple neural network for handwritten digit classification, I would use Keras with TensorFlow as the backend.  Basic steps:  Load dataset (e.g., MNIST) Normalize pixel values Build a sequential model: Input layer One or more dense hidden layers (ReLU activation) Output layer with softmax (for 10 classes) Compile with optimizer like Adam and loss function categorical_crossentropy Train using model.fit()  Example (simplified):  from tensorflow.keras.models import Sequential from tensorflow.keras.layers import Dense, Flatten  model = Sequential([     Flatten(input_shape=(28, 28)),     Dense(128, activation='relu'),     Dense(10, activation='softmax') ])  model.compile(optimizer='adam',               loss='categorical_crossentropy',               metrics=['accuracy'])  Optimization considerations:  Normalize input data Use dropout layers to prevent overfitting Tune hyperparameters (learning rate, batch size, epochs) Use early stopping Experiment with deeper architectures if needed 3. Handling Overfitting in a Churn Prediction Model  Answer:  \u201cIf my churn prediction model is overfitting on a dataset with 10 features and 10,000 samples, I would take several steps:  1. Simplify the model  Use simpler algorithms (e.g., logistic regression instead of complex models) Reduce model complexity (fewer layers, lower depth in trees)  2. Regularization  Apply L1/L2 regularization (Ridge/Lasso in Scikit-learn) Add dropout if using neural networks  3. Cross-validation  Use k-fold cross-validation to ensure the model generalizes well  4. Feature selection  Remove irrelevant or noisy features Use techniques like correlation analysis or feature importance  5. More data or data augmentation  If possible, increase dataset size or balance classes  6. Early stopping  Monitor validation loss and stop training when performance degrades  7. Ensemble methods  Use models like Random Forest or Gradient Boosting, which often generalize better  Libraries I would use:  Scikit-learn for modeling, regularization, and validation TensorFlow / Keras for neural networks Pandas for preprocessing and feature engineering  Overall, my focus would be on improving generalization by reducing complexity, validating properly, and ensuring the model is learning meaningful patterns rather than noise."
+      },
+      {
+        "technology": "SQL",
+        "question": "1. Can you explain how you've used SQL to preprocess data for a machine learning model in your previous projects, and what types of data manipulation tasks you've performed?\n2. How would you optimize a SQL query to efficiently retrieve a large dataset for training a model, considering factors like indexing, joins, and subqueries?\n3. Suppose you're building a predictive maintenance model for industrial equipment, and you have a SQL database containing sensor readings and equipment failure history - how would you design a database query to extract relevant features and create a suitable dataset for training the model?",
+        "answer": "n my projects, I\u2019ve used SQL as the first step in the machine learning pipeline to clean, transform, and prepare raw data before bringing it into Python.  Some of the key preprocessing tasks I\u2019ve performed include:  Data cleaning: Handling missing values using CASE WHEN, filtering out invalid records, and standardizing formats (like dates and categories) Joins: Combining multiple tables\u2014such as customer info, transactions, and activity logs\u2014using INNER JOIN and LEFT JOIN Feature engineering: Creating new features directly in SQL, such as: Aggregations (COUNT, AVG, SUM) Time-based features (e.g., number of transactions in the last 30 days) Filtering and segmentation: Using WHERE and GROUP BY to extract relevant subsets of data Window functions: Using functions like ROW_NUMBER(), LAG(), and LEAD() to create sequential or time-dependent features  For example, in a churn prediction project, I used SQL to calculate metrics like customer activity frequency, average spend, and recency\u2014all before loading the dataset into Pandas for modeling.\u201d  2. Optimizing SQL Queries for Large Datasets  Answer:  \u201cWhen working with large datasets for model training, I focus on optimizing SQL queries to reduce execution time and resource usage.  Indexing: I ensure indexes exist on columns used in JOIN, WHERE, and ORDER BY clauses. I also use composite indexes when multiple columns are frequently queried together. Efficient joins: I minimize joins to only necessary tables and prefer INNER JOIN when possible. I also pre-filter large tables using subqueries or CTEs before joining to reduce data size. Subqueries and CTEs: I use them to break complex queries into manageable steps and to filter or aggregate data early before expensive joins. Avoid unnecessary data retrieval: I avoid SELECT * and only fetch required columns. Execution plan analysis: I use EXPLAIN to identify bottlenecks like full table scans or inefficient joins. Partitioning and batching: For very large datasets, I rely on partitioned tables (e.g., by date) and retrieve data in chunks for downstream processing.  Overall, my goal is to push computation to the database efficiently while minimizing the amount of data transferred to the ML pipeline"
+      }
+    ],
+    "data_consent": true
+  }
+]
